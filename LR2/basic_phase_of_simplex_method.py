@@ -1,9 +1,10 @@
 import copy
 import pprint
+
 import numpy as np
 
 
-def main_simplex_method(matrix_a: np.array, vector_c: np.array, vector_x: np.array, vector_b: np.array) -> (np.array, np.array):
+def basic_phase_of_simplex_method(matrix_a: np.array, vector_c: np.array, vector_x: np.array, vector_b: np.array) -> (np.array, np.array):
     a: np.array = copy.deepcopy(matrix_a)
     c: np.array = copy.deepcopy(vector_c)
     x: np.array = copy.deepcopy(vector_x)
