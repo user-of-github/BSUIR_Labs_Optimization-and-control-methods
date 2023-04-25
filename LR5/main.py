@@ -1,16 +1,15 @@
-# This is a sample Python script.
-
-# Press Ctrl+F5 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
-
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press F9 to toggle the breakpoint.
+import pprint
+from data import VECTOR_A_EXAMPLE as production_points
+from data import VECTOR_B_EXAMPLE as destination_points
+from data import VECTOR_C_EXAMPLE as cost_matrix
+from get_transportation_plan_by_method_of_potentials import get_transportation_plan_by_method_of_potentials
 
 
-# Press the green button in the gutter to run the script.
+def main() -> None:
+    matrix_transport_problem_solution = get_transportation_plan_by_method_of_potentials(production_points, destination_points, cost_matrix)
+
+    pprint.pprint(matrix_transport_problem_solution)
+
+
 if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+    main()
